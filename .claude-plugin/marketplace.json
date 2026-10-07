@@ -1,0 +1,16 @@
+{
+  "name": "keystone",
+  "owner": {
+    "name": "NovusEdge",
+    "url": "https://github.com/NovusEdge"
+  },
+  "plugins": [
+    {
+      "name": "keystone",
+      "source": "./",
+      "description": "Sourced software architecture and resilience principles, plus /architecture-review for a repository's design documents and decisions.",
+      "version": "0.1.0",
+      "keywords": ["architecture", "design-review", "resilience", "adr", "distributed-systems"]
+    }
+  ]
+}
