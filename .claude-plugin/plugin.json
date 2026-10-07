@@ -1,12 +1,12 @@
 {
-  "name": "keystone",
-  "displayName": "Keystone",
-  "version": "0.1.0",
+  "name": "software-architecture",
+  "displayName": "Software Architecture",
+  "version": "0.2.0",
   "description": "A sourced reference of software architecture and resilience principles for designing systems, with a review command that applies it to a repository's design documents and decisions.",
   "author": {
     "name": "NovusEdge"
   },
   "license": "MIT",
-  "homepage": "https://github.com/NovusEdge/keystone",
+  "homepage": "https://github.com/NovusEdge/software-architecture",
   "keywords": ["architecture", "design-review", "resilience", "adr", "distributed-systems"]
 }

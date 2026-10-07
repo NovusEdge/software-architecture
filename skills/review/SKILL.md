@@ -1,13 +1,13 @@
 ---
-name: architecture-review
-description: Review a repository's architecture from its design documents and decision ledger against the keystone architecture reference, and write a dated review file under reviews/. Run as /architecture-review [paths]. Reviews design material, not code.
+name: review
+description: Review a repository's architecture from its design documents and decision ledger against the software-architecture reference, and write a dated review file under reviews/. Run as /software-architecture:review [paths]. Reviews design material, not code.
 argument-hint: "[paths...]"
 disable-model-invocation: true
 ---
 
 # Architecture review
 
-Gather the repository's design material, then dispatch the `keystone:architecture-reviewer` agent to review it against the reference. The agent writes one file, `reviews/YYYY-MM-DD-architecture-review.md`, and changes nothing else. Do not edit files yourself during this command.
+Gather the repository's design material, then dispatch the `software-architecture:architecture-reviewer` agent to review it against the reference. The agent writes one file, `reviews/YYYY-MM-DD-architecture-review.md`, and changes nothing else. Do not edit files yourself during this command.
 
 ## 1. Find the target
 
@@ -45,7 +45,7 @@ The reference files are in `${CLAUDE_SKILL_DIR}/../architecture/references/`, wh
 
 Choose the output path `reviews/<date>-architecture-review.md` in the target; if that file exists, add `-2`, `-3` and so on before `.md`.
 
-Call the Agent tool with `subagent_type: keystone:architecture-reviewer` and a prompt that contains:
+Call the Agent tool with `subagent_type: software-architecture:architecture-reviewer` and a prompt that contains:
 
 - the target repository's absolute path, the date and the commit
 - the absolute output path

@@ -1,8 +1,8 @@
-# keystone
+# software-architecture
 
 **A sourced software architecture reference for Claude Code, with a review command.**
 
-Keystone gives an agent, and the person working with it, a reference of
+This plugin gives an agent, and the person working with it, a reference of
 established architecture and resilience practice: how to make and record
 decisions, where to draw boundaries, how systems fail under load, how to change
 data and contracts safely, how to operate and secure what you build, and how to
@@ -18,15 +18,15 @@ scenarios.
 From Claude Code:
 
 ```sh
-/plugin marketplace add NovusEdge/keystone
-/plugin install keystone@keystone
+/plugin marketplace add NovusEdge/software-architecture
+/plugin install software-architecture@software-architecture
 ```
 
 Or from a local checkout:
 
 ```sh
-/plugin marketplace add /path/to/keystone
-/plugin install keystone@keystone
+/plugin marketplace add /path/to/software-architecture
+/plugin install software-architecture@software-architecture
 ```
 
 Restart Claude Code after installing.
@@ -52,8 +52,8 @@ does not apply" names real conditions where the principle is wrong.
 ## Review a repository's architecture
 
 ```sh
-/keystone:architecture-review
-/keystone:architecture-review docs/design.md proposals/
+/software-architecture:review
+/software-architecture:review docs/design.md proposals/
 ```
 
 With no arguments, the command gathers the repository's design material: the
@@ -120,4 +120,4 @@ They confirm every principle has all five fields, every source is marked, every
 verified source has a URL and fetch date, relative links resolve, skill and agent
 frontmatter parse, and the plugin and marketplace manifests agree.
 
-Keystone is licensed under the [MIT License](LICENSE).
+software-architecture is licensed under the [MIT License](LICENSE).

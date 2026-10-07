@@ -1,18 +1,18 @@
 {
-  "name": "keystone",
+  "name": "software-architecture",
   "owner": {
     "name": "NovusEdge",
     "url": "https://github.com/NovusEdge"
   },
   "metadata": {
-    "description": "Keystone: a sourced software architecture reference and design review command for Claude Code."
+    "description": "A sourced software architecture reference and design review command for Claude Code."
   },
   "plugins": [
     {
-      "name": "keystone",
+      "name": "software-architecture",
       "source": "./",
-      "description": "Sourced software architecture and resilience principles, plus /architecture-review for a repository's design documents and decisions.",
-      "version": "0.1.0",
+      "description": "Sourced software architecture and resilience principles, plus /software-architecture:review for a repository's design documents and decisions.",
+      "version": "0.2.0",
       "keywords": ["architecture", "design-review", "resilience", "adr", "distributed-systems"]
     }
   ]

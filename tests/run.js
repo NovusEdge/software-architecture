@@ -79,7 +79,7 @@ function principles(text) {
   return out;
 }
 
-console.log('keystone');
+console.log('software-architecture');
 
 const refFiles = fs.readdirSync(REFS).filter(f => f.endsWith('.md')).sort();
 assert('reference files exist', refFiles.length > 0);
@@ -140,7 +140,7 @@ for (const file of markdownFiles(ROOT)) {
 
 const SKILLS = [
   { file: 'skills/architecture/SKILL.md', name: 'architecture' },
-  { file: 'skills/architecture-review/SKILL.md', name: 'architecture-review' },
+  { file: 'skills/review/SKILL.md', name: 'review' },
 ];
 for (const { file, name } of SKILLS) {
   const fm = frontmatter(read(file));

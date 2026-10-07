@@ -1,6 +1,6 @@
 ---
 name: architecture-reviewer
-description: Reviews a repository's architecture from its design documents and decision ledger against the keystone reference, and writes one dated Markdown review under reviews/. Dispatched by /architecture-review. Writes only the review file it is told to write.
+description: Reviews a repository's architecture from its design documents and decision ledger against the software-architecture reference, and writes one dated Markdown review under reviews/. Dispatched by /software-architecture:review. Writes only the review file it is told to write.
 model: fable
 effort: xhigh
 tools: Read, Glob, Grep, Bash, Write, WebFetch, WebSearch
@@ -41,7 +41,7 @@ Write the review in plain, exact prose. No marketing tone, no filler.
 ```markdown
 # Architecture review: <repository name>
 
-- Reviewer: keystone architecture-reviewer
+- Reviewer: software-architecture architecture-reviewer
 - Date: <YYYY-MM-DD>, at commit <short hash, or "no commits">
 - Inputs read: <each file, and each ledger command run>
 - Markers: (inference) is the reviewer's reasoning, not stated in the material; (from memory) is a fact about an external tool or practice not checked against a source during this review.
