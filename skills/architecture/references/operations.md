@@ -75,7 +75,7 @@ Markers: [V] verified on the fetched page, with URL and fetch date; [U] not veri
 
 **Claim.** After an incident, write a postmortem that identifies contributing causes in systems and processes, not individuals, with follow-up actions that have owners and dates.
 
-**Why it holds.** If an honest account of an incident gets someone punished, people stop giving honest accounts, and the next incident has the same hidden cause. "An engineer ran the wrong command" ends the inquiry; "the command for production and staging differ by one flag, and nothing confirms which is targeted" leads to a fix that protects everyone. People can not be fixed; the systems and processes around them can.
+**Why it holds.** If an honest account of an incident gets someone punished, people stop giving honest accounts, and the next incident has the same hidden cause. "An engineer ran the wrong command" ends the inquiry; "the command for production and staging differ by one flag, and nothing confirms which is targeted" leads to a fix that protects everyone. A postmortem cannot change people; it can change the systems and processes around them.
 
 **When it does not apply.** Blameless does not mean consequence-free for repeated disregard of known process. A postmortem whose actions have no owners or dates changes nothing.
 

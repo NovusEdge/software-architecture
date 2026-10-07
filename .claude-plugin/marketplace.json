@@ -4,6 +4,9 @@
     "name": "NovusEdge",
     "url": "https://github.com/NovusEdge"
   },
+  "metadata": {
+    "description": "Keystone: a sourced software architecture reference and design review command for Claude Code."
+  },
   "plugins": [
     {
       "name": "keystone",
