@@ -54,6 +54,8 @@ Call the Agent tool with `subagent_type: software-architecture:architecture-revi
 - the absolute path of the references directory and of `${CLAUDE_SKILL_DIR}/../architecture/SKILL.md`, whose map says which reference to open for which topic
 - any focus the user gave beyond paths
 
+Codex plugins cannot register agents, so there is no `architecture-reviewer` subagent type in Codex. There, spawn a subagent whose prompt is the body of `${CLAUDE_SKILL_DIR}/../../agents/architecture-reviewer.md` (below its frontmatter) followed by the items above. If you cannot spawn subagents, follow that file yourself, and write nothing but the review file.
+
 ## 5. Report
 
 When the agent finishes, confirm the review file exists. Tell the user its path, the number of findings in "Must change before building" and "Should change", and the title of each must-change finding. Do not restate the review.

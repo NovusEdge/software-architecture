@@ -31,6 +31,35 @@ Or from a local checkout:
 
 Restart Claude Code after installing.
 
+### Codex
+
+From the Nimble Fox team marketplace:
+
+```sh
+codex plugin marketplace add nimble-fox-ai/agent-plugins
+codex plugin add software-architecture@nimble-fox
+```
+
+Codex reads the root `plugin.json`; Claude Code reads `.claude-plugin/plugin.json`.
+Both load the same `skills/` directory, so there is one copy of every file.
+
+What carries over:
+
+- The `architecture` skill, with all its references.
+- The `review` skill. `skills/review/agents/openai.yaml` sets
+  `allow_implicit_invocation: false`, Codex's counterpart of
+  `disable-model-invocation`, so it runs only when you name it. Codex names the
+  skill `software-architecture:review`.
+
+What does not:
+
+- The `architecture-reviewer` agent. Codex plugins cannot ship agents, and the
+  agent's `model`, `effort` and `tools` settings have no Codex equivalent. The
+  review skill tells Codex to spawn a subagent with the body of
+  `agents/architecture-reviewer.md` as its prompt, or to follow that file
+  itself, so the review still runs, on whatever model the session uses.
+- Nothing else is lost: the plugin has no hooks, commands or MCP servers.
+
 ## Use the reference while designing
 
 The `architecture` skill loads when an agent designs or changes how a system is

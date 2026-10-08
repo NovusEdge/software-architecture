@@ -178,6 +178,19 @@ for (const { file, name } of SKILLS) {
       `${entry && entry.version} vs ${plugin.version}`
     );
   }
+
+  let portable = null;
+  try { portable = JSON.parse(read('plugin.json')); } catch (e) { portable = e; }
+  assert('root plugin.json (Codex) parses', !(portable instanceof Error), portable && portable.message);
+  if (!(plugin instanceof Error) && !(portable instanceof Error)) {
+    for (const key of ['name', 'version', 'description', 'license']) {
+      assert(
+        `root plugin.json and .claude-plugin/plugin.json agree on ${key}`,
+        portable[key] === plugin[key],
+        `${portable[key]} vs ${plugin[key]}`
+      );
+    }
+  }
 }
 
 console.log(failures ? `\n${failures} failed` : '\nall passed');
