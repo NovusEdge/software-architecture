@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 # Architecture review
 
-Gather the repository's design material, then dispatch the `software-architecture:architecture-reviewer` agent to review it against the reference. The agent writes one file, `reviews/YYYY-MM-DD-architecture-review.md`, and changes nothing else. Do not edit files yourself during this command.
+Gather the repository's design material, then dispatch the `software-architecture:architecture-reviewer` agent to review it against the reference. The agent writes one file, `reviews/YYYY-MM-DD-architecture-review.md`, and changes nothing else. Do not edit files yourself during this command, except the review file in the Codex fallback in step 4.
 
 ## 1. Find the target
 
@@ -53,6 +53,8 @@ Call the Agent tool with `subagent_type: software-architecture:architecture-revi
 - the ledger commands from step 3, or a note that there is no ledger
 - the absolute path of the references directory and of `${CLAUDE_SKILL_DIR}/../architecture/SKILL.md`, whose map says which reference to open for which topic
 - any focus the user gave beyond paths
+
+Codex plugins cannot register agents, so there is no `architecture-reviewer` subagent type in Codex. There, spawn a subagent whose prompt is the body of `${CLAUDE_SKILL_DIR}/../../agents/architecture-reviewer.md` (below its frontmatter) followed by the items above. If you cannot spawn subagents, follow that file yourself, and write nothing but the review file.
 
 ## 5. Report
 

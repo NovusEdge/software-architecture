@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "software-architecture",
+  "version": "0.2.0",
+  "description": "A sourced reference of software architecture and resilience principles for designing systems, with a review command that applies it to a repository's design documents and decisions.",
+  "author": {
+    "name": "NovusEdge",
+    "url": "https://github.com/NovusEdge"
+  },
+  "homepage": "https://github.com/NovusEdge/software-architecture",
+  "repository": "https://github.com/NovusEdge/software-architecture",
+  "license": "MIT",
+  "keywords": ["architecture", "design-review", "resilience", "adr", "distributed-systems"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Software Architecture"
+      }
+    }
+  }
+}
