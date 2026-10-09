@@ -33,7 +33,7 @@ Restart Claude Code after installing.
 
 ### Codex
 
-From the Nimble Fox team marketplace:
+From the Nimble Fox team marketplace, which is private to the `nimble-fox-ai` organization:
 
 ```sh
 codex plugin marketplace add nimble-fox-ai/agent-plugins
@@ -48,7 +48,8 @@ What carries over:
 - The `architecture` skill, with all its references.
 - The `review` skill. `skills/review/agents/openai.yaml` sets
   `allow_implicit_invocation: false`, Codex's counterpart of
-  `disable-model-invocation`, so it runs only when you name it. Codex names the
+  `disable-model-invocation`, meant to make it run only when you name it; no test checks
+  that Codex enforces this. Codex names the
   skill `software-architecture:review`.
 
 What does not:

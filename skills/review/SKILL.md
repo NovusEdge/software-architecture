@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 # Architecture review
 
-Gather the repository's design material, then dispatch the `software-architecture:architecture-reviewer` agent to review it against the reference. The agent writes one file, `reviews/YYYY-MM-DD-architecture-review.md`, and changes nothing else. Do not edit files yourself during this command.
+Gather the repository's design material, then dispatch the `software-architecture:architecture-reviewer` agent to review it against the reference. The agent writes one file, `reviews/YYYY-MM-DD-architecture-review.md`, and changes nothing else. Do not edit files yourself during this command, except the review file in the Codex fallback in step 4.
 
 ## 1. Find the target
 
